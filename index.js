@@ -38,9 +38,9 @@ let array = [];
 async function createDB(data) {
   const neo4j = require('neo4j-driver')
       
-      const uri = 'neo4j+s://6ca24c8e.databases.neo4j.io';
-      const user = 'neo4j';
-      const password = 'aeVWyKqjPO_zrOdcvRzczbVMKludb6K4W6Rf2hj10ro';
+      const uri = 'url of neo4j';
+      const user = 'user id';
+      const password = 'pass';
       
       const driver = neo4j.driver(uri, neo4j.auth.basic(user, password))
       const session = driver.session()
@@ -102,9 +102,9 @@ async function createDB(data) {
   async function readDB() {
     const neo4j = require('neo4j-driver')
     
-    const uri = 'neo4j+s://6ca24c8e.databases.neo4j.io';
-    const user = 'neo4j';
-    const password = 'aeVWyKqjPO_zrOdcvRzczbVMKludb6K4W6Rf2hj10ro';
+    const uri = 'url of neo4j';
+      const user = 'user id';
+      const password = 'pass';
     
     const driver = neo4j.driver(uri, neo4j.auth.basic(user, password))
     const session = driver.session()
@@ -217,15 +217,15 @@ async function main(data) {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: "aadarshjr195@gmail.com", // generated ethereal user
-      pass: "ypqjxeivdgjsjfjr", // generated ethereal password
+      user: "emailid", // generated email user
+      pass: "pass", // generated email password
     },
   });
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: '"Uni-assist "<aadarshjr195@gmail.com>', // sender address
-    to: "aadarshsasikumar@gmail.com", // list of receivers
+    from: '"Uni-assist "<emailid>', // sender address
+    to: "emailid", // list of receivers
     subject: "New courses added to uni-assist", // Subject line
     //html: data, // html body
     text: `New added uniassist courses. \n\n ${data}`
@@ -235,9 +235,6 @@ async function main(data) {
   // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
 }
 
-async function compareAndAdd(params) {
-  
-}
 
 // MATCH (CourseID {ID: '160627'})
 // DELETE CourseID
@@ -305,7 +302,7 @@ async function compareAndAdd(params) {
 
 //     });
 
-// 00 00 * * *
+// 00 00 * * * once every day
 //sending mail
  cron.schedule('05 * * * *',async function() {
   
