@@ -1,0 +1,19 @@
+{
+  "name": "uniassist_automation",
+  "version": "1.0.0",
+  "description": "automate uniassist new courese for winter semester.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "chalk-animation": "^1.6.0",
+    "express": "^4.17.2",
+    "neo4j-driver": "^4.4.1",
+    "node-cron": "^3.0.0",
+    "nodemailer": "^6.7.2"
+  }
+}
